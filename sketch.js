@@ -42,7 +42,7 @@ function setup() {
   );
 
   playerArcher = new PlayerArcher(
-    width - 1100,
+    width - 1350,
     playerBase.body.position.y - 180,
     120,
     120
