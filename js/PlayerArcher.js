@@ -18,25 +18,25 @@ class PlayerArcher {
         var pos = this.body.position;
         var angle = this.body.angle
 
+        
+
+        if (keyCode === "UP_ARROW" && playerArcher.body.angle < 1.77) {
+          angleValue += 0.1; //angleValue = angleValue + 1
+          Matter.Body.setAngle(this.body,angle);
+        }
+
+        if(keyCode === "DOWN_ARROW" && playerArcher.body.angle > 1.47) {
+          angleValue -= -0.1
+          Matter.Body.setAngle(this.body.angle);
+        }else{
+              //angleValue = 0.1
+        }
         push();
         translate(pos.x, pos.y)
         rotate(angle);
         imageMode(CENTER);
         image(this.image, 0, 0, this.width, this.height);
         pop();
-
-        if (keyCode === "UP" && playerArcher.body.angle < 1.77) {
-          angleValue = 0.1
-        }else{
-            //angleValue = -0.1
-        }
-
-        if(keyCode === "DOWN" && playerArcher.body.angle > 1.47) {
-          angleValue = -0.1
-        }else{
-              //angleValue = 0.1
-        }
-    
     }
     
 }
